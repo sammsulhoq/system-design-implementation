@@ -104,8 +104,6 @@ sequenceDiagram
     DC-->>Client: returns value
 ```
 
-![Sequence Diagram](doc-assets/image_1.png)
-
 ### 🧱 Class Diagram – Visual
 
 ```mermaid
@@ -132,8 +130,6 @@ classDiagram
     DistributedCache *-- CacheNode : composes
     DistributedCache ..> ConsistentHashRing : depends on
 ```
-
-![Class Diagram](doc-assets/image_2.png)
 
 > _Note: Replace the placeholder URLs above with your own rendered PlantUML/Visual diagrams if hosting externally or using an editor like draw.io._
 

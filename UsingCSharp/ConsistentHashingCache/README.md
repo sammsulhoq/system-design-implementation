@@ -41,11 +41,42 @@ Create a scalable distributed caching system using consistent hashing that:
 
 ### 📐 Class Diagram
 
-+--------------------------+ | ConsistentHashRing<T> | +--------------------------+ | +AddNode(node) | | +RemoveNode(node) | | +GetNode(key) | +--------------------------+
+### Class Diagrams (Table Representation)
 
-+--------------------------+ | CacheNode | +--------------------------+ | +Put(key, value) | | +Get(key) | | +Delete(key) | +--------------------------+
+This section provides a detailed breakdown of the classes in the system and their respective methods.
 
-+--------------------------+ | DistributedCache | +--------------------------+ | +Put(key, value) | | +Get(key) | | +Delete(key) | +--------------------------+
+---
+
+#### `ConsistentHashRing` Class Details
+
+| Section   | Details                                |
+| :-------- | :------------------------------------- |
+| **Name** | `ConsistentHashRing`                   |
+| **Methods** | `+AddNode(node)`                       |
+|           | `+RemoveNode(node)`                    |
+|           | `+GetNode(key)`                        |
+
+---
+
+#### `CacheNode` Class Details
+
+| Section   | Details                  |
+| :-------- | :----------------------- |
+| **Name** | `CacheNode`              |
+| **Methods** | `+Put(key, value)`       |
+|           | `+Get(key)`              |
+|           | `+Delete(key)`           |
+
+---
+
+#### `DistributedCache` Class Details
+
+| Section   | Details                  |
+| :-------- | :----------------------- |
+| **Name** | `DistributedCache`       |
+| **Methods** | `+Put(key, value)`       |
+|           | `+Get(key)`              |
+|           | `+Delete(key)`           |
 
 ### 📤 Sequence Diagram – GET Operation
 

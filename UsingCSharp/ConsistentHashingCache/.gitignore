@@ -1,0 +1,51 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.tss
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+*.log
+*.pdb
+*.dll
+*.exe
+*.manifest
+*.res
+*.resources
+*.tlb
+*.tlh
+*.tmp
+*.o
+*.objd
+
+# NuGet packages
+packages/
+*.nupkg
+*.snupkg
+*.cache
+project.assets.json
+*.nuget.g.props
+*.nuget.g.targets
+
+# Rider files
+.idea/
+*.iml
+
+# Resharper files
+*.DotSettings
+*.DotSettings.user
+
+# Mac files
+.DS_Store
+
+# Misc
+logs/
+TestResults/
+Thumbs.db

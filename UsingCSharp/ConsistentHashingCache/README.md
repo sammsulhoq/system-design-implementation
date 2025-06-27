@@ -89,9 +89,49 @@ Client → DistributedCache : GET("banana") DistributedCache → HashRing : GetN
 
 ### 🧭 Sequence Diagram – Visual
 
+```mermaid
+sequenceDiagram
+    participant Client
+    participant CHR as ConsistentHashRing
+    participant DC as DistributedCache
+    participant CN as CacheNode
+
+    Client->>DC: Get(key)
+    DC->>CHR: GetNode(key)
+    CHR-->>DC: returns CacheNode instance
+    DC->>CN: Get(key)
+    CN-->>DC: returns value
+    DC-->>Client: returns value
+```
+
 ![Sequence Diagram](doc-assets/image_1.png)
 
 ### 🧱 Class Diagram – Visual
+
+```mermaid
+classDiagram
+    class ConsistentHashRing {
+        +AddNode(node)
+        +RemoveNode(node)
+        +GetNode(key)
+    }
+
+    class CacheNode {
+        +Put(key, value)
+        +Get(key)
+        +Delete(key)
+    }
+
+    class DistributedCache {
+        +Put(key, value)
+        +Get(key)
+        +Delete(key)
+    }
+
+    ConsistentHashRing "1" --> "1" DistributedCache : uses/orchestrates
+    DistributedCache *-- CacheNode : composes
+    DistributedCache ..> ConsistentHashRing : depends on
+```
 
 ![Class Diagram](doc-assets/image_2.png)
 
